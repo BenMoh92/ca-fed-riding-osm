@@ -1,0 +1,71 @@
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>OpenLayers</title>
+    <link rel="stylesheet" href="node_modules/ol/ol.css">
+    <style>
+      @import "node_modules/ol/ol.css";
+    </style>
+    <style>
+      html, body, #map-container {
+        margin: 0;
+        height: 100%;
+        width: 100%;
+        font-family: sans-serif;
+        background-color: #04041b;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map-container"></div>
+    <script src="./main.js" type="module"></script>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Federal Ridings Map</title>
+    <link rel="stylesheet" href="node_modules/ol/ol.css">
+    <style>
+      .map {
+        width: 100%;
+        height: 1000px;
+      }
+      #map {
+        position: relative;
+      }
+
+      #info {
+        position: absolute;
+        display: inline-block;
+        height: auto;
+        width: auto;
+        z-index: 100;
+        background-color: #ffffff;
+        color: #6b4747;
+        text-align: center;
+        border-radius: 4px;
+        padding: 5px;
+        left: 50%;
+        transform: translateX(3%);
+        visibility: hidden;
+        pointer-events: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <form name="valform" id="form_id" action="" method="POST">
+        Postal Code: <input type="text" id="cctextboxid" name="cctextbox"><br/>
+        <input type="button" id="button_id" name="submitButton" value="Get riding"/>
+    </div>
+    <div id="map" class="map">
+      <div id="info"></div>
+    </div>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
